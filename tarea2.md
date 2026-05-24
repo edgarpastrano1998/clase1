@@ -1,13 +1,15 @@
-Funciones de la aplicacion.
+```mermaid
+flowchart TD
 
-Caja 1: interfaz de entrada a la aplicacion de streamin con nombre de ususario y contraseña.
+    A["Caja 1: Interfaz de entrada a la aplicación de streaming<br><br>• Usuario<br>• Contraseña"] --> B["Caja 2: Validación de cuenta en el servidor"]
 
-Caja 2: Validacion de cuenta en el servidor.  
+    B -->|Acceso correcto| C["Caja 3: Pantalla de inicio<br><br>Opciones:<br>• Música reciente<br>• Descargas<br>• Lista de reproducción"]
 
-Caja 3: Pantalla de inicio.
-donde mostrara varias opciones como (musica reciente, descargas y lista de reprodccion)
+    C --> D["Caja 4: Biblioteca de canciones descargadas<br><br>Gestor de datos para la funcionalidad de la aplicación"]
 
-Caja 4: biblioteca de canciones descargadas por el usuario.
-Gestor de datos para la funcionalidad de la aplicacion.
+    D --> E["Caja 5: Almacenamiento del dispositivo móvil<br><br>Espacio donde se guarda la música descargada por el usuario"]
 
-Caja 5: Almacenamiento del dispocitivo movil donde se guardara la musica descargada por el usuario.
+    B -->|Error de autenticación| F["Mensaje de error<br><br>Usuario o contraseña incorrectos"]
+
+    F --> A
+```
